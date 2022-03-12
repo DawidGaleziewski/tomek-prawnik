@@ -7,13 +7,15 @@ export enum SectionVariants {
 }
 
 interface ISection {
+    id?: string,
     as?: ElementType;
     variant?: SectionVariants
 }
 
-export const Section: FunctionComponent<ISection> = ({children, as, variant}) => <SectionBase as={as} variant={variant}>{children}</SectionBase>;
+export const Section: FunctionComponent<ISection> = ({children, as, variant, id}) => <SectionBase id={id} as={as} variant={variant}>{children}</SectionBase>;
 
 interface ISectionBase {
+    id?: string,
     as?: ElementType;
     variant?: SectionVariants
 }

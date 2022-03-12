@@ -7,6 +7,8 @@ import { LAWTheme, ILAWTheme } from '../theme/law'
 import { UXContainer } from '../atoms/UXContainer'
 import { Typography, TypographyVariants } from '../atoms/Typography'
 import { Section, SectionVariants } from '../atoms/Section'
+import { Navigation, NavigationSections } from '../components/Navigation';
+import {MainSection} from "../components/MainSection";
 
 interface IOfferBox {
   headerText: string
@@ -34,25 +36,11 @@ const IndexPage = () => {
   return (
     <ThemeProvider theme={LAWTheme}>
       <Fragment>
-        <UXContainer>
-          <nav>
-            <ul>
-              <li>O mnie</li>
-              <li>cennik</li>
-              <li>kontakt</li>
-            </ul>
-          </nav>
-        </UXContainer>
+        <Navigation />
 
         <main>
-          <section>
-            <UXContainer>
-              <Typography as="h1">
-                Kancelaria Radcy Prawnego <br />
-                Tomasz Mikusek
-              </Typography>
-            </UXContainer>
-          </section>
+
+          <MainSection />
 
           <Section variant={SectionVariants.DARK}>
             <UXContainer>
@@ -101,7 +89,7 @@ const IndexPage = () => {
             </UXContainer>
           </Section>
 
-          <Section variant={SectionVariants.DARK}>
+          <Section id={NavigationSections.ABOUT_ME} variant={SectionVariants.DARK}>
             <UXContainer>
               <Typography as="h2" variant={TypographyVariants.SECTION_HEADER}>
                 Kim jestem?
@@ -145,7 +133,7 @@ const IndexPage = () => {
             </UXContainer>
           </Section>
 
-          <Section variant={SectionVariants.DARK}>
+          <Section id={NavigationSections.PRICING} variant={SectionVariants.DARK}>
             <UXContainer>
               <Typography as="h2" variant={TypographyVariants.SECTION_HEADER}>
                 Wynagrodzenie
@@ -180,7 +168,7 @@ const IndexPage = () => {
             </UXContainer>
           </Section>
 
-          <Section variant={SectionVariants.DARK}>
+          <Section id={NavigationSections.CONTACT} variant={SectionVariants.DARK}>
             <UXContainer>
               <Typography as="h2" variant={TypographyVariants.SECTION_HEADER}>
                 Skontaktuj się

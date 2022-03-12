@@ -44,6 +44,9 @@ export const LAWTheme = {
     section: {
       desktop: '14rem 0 10rem 0',
     },
+    nav: {
+      desktop: '5.2rem 0',
+    },
   },
 }
 
