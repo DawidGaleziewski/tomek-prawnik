@@ -1,4 +1,5 @@
 export const LAWTheme = {
+  fontFamily: {},
   size: {
     font: {
       h1: '5.8rem',
@@ -34,6 +35,14 @@ export const LAWTheme = {
       success: '#2DC071',
       alert: '#E77C40',
       danger: '#E74040',
+    },
+  },
+  padding: {
+    sectionHeader: {
+      desktop: '0 0 4.8rem 0',
+    },
+    section: {
+      desktop: '14rem 0 10rem 0',
     },
   },
 }

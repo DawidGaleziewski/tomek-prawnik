@@ -1,20 +1,28 @@
-import React, { FunctionComponent, ElementType } from 'react'
+import React, { FunctionComponent, ElementType } from 'react';
+import {css} from '@emotion/react';
 import styled from '@emotion/styled';
 
-interface ITypography {
-    as?: ElementType
+export enum TypographyVariants {
+    SECTION_HEADER = "section-header"
 }
 
-export const Typography: FunctionComponent<ITypography> = ({children, as}) => <TypographyBase as={as}>{children}</TypographyBase>;
+interface ITypography {
+    as?: ElementType;
+    variant?: TypographyVariants
+}
 
-
+export const Typography: FunctionComponent<ITypography> = ({children, as, variant}) => <TypographyBase as={as} variant={variant}>{children}</TypographyBase>;
 
 interface ITypographyBase {
-    as?: ElementType
+    as?: ElementType;
+    variant?: TypographyVariants
 }
 
 const TypographyBase = styled.p<ITypographyBase>`
-    ${props => props.theme.colors.background}
+    margin: 0;
+    ${props => props.variant === TypographyVariants.SECTION_HEADER && css`
+        font-size: ${props.theme.size.font.h2};
+        text-align: center;
+        padding: ${props.theme.padding.sectionHeader.desktop}
+    `}
 `;
-
-{/* <Tag>{children}</Tag> */}

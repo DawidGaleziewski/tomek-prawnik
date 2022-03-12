@@ -1,10 +1,12 @@
 import React, { FunctionComponent, Fragment } from 'react'
 import { ThemeProvider } from '@emotion/react'
-import 'normalize.css'
+import 'normalize.css';
+import '../theme/global.css';
 import { LAWTheme, ILAWTheme } from '../theme/law';
 // componets
 import {UXContainer} from "../atoms/UXContainer";
-import {Typography} from "../atoms/Typography";
+import {Typography, TypographyVariants} from "../atoms/Typography";
+import {Section, SectionVariants} from "../atoms/Section";
 
 
 interface IOfferBox {
@@ -55,9 +57,9 @@ const IndexPage = () => {
           </UXContainer>
         </section>
 
-        <section>
+        <Section variant={SectionVariants.DARK}>
           <UXContainer>
-            <Typography as="h2">Zakres usług</Typography>
+            <Typography as="h2" variant={TypographyVariants.SECTION_HEADER}>Zakres usług</Typography>
             <div>
               <OfferBox headerText="Odszkodowania" headerImg="test">
                 <Typography>
@@ -97,7 +99,7 @@ const IndexPage = () => {
               </OfferBox>
             </div>
           </UXContainer>
-        </section>
+        </Section>
 
         <section>
           <UXContainer>
