@@ -1,8 +1,6 @@
-import React, { FunctionComponent, Fragment } from 'react'
+import React from 'react'
 import { OfferBox } from '../atoms/OfferBox'
 import styled from '@emotion/styled';
-import { UXContainer } from '../atoms/UXContainer'
-import { Typography, TypographyVariants } from '../atoms/Typography'
 
 // Icons
 import HammerIcon from '../images/icons/hammer-lg.svg';
@@ -40,21 +38,10 @@ export const OfferList = () => (
 )
 
 const OfferListBase = styled.ul`
-  /* display: flex;
-  flex-wrap: wrap; */
   padding: 0;
   margin: 0;
-  /* justify-content: space-between; */
   display: grid;
   grid-template-columns: repeat(3, 33% [col-start]);
   column-gap: 3rem;
   row-gap: 3rem;
-
-  & li {
-    /* flex-basis: 32%;
-    width: 32%; */
-    /* flex-basis: 25%;
-    flex-grow: 0;
-    flex-shrink: 0; */
-  }
 `;
