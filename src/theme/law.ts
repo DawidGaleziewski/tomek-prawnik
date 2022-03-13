@@ -1,5 +1,14 @@
 export const LAWTheme = {
+  weight: {
+    normal: 400,
+    bold: 700,
+  },
   fontFamily: {},
+  border: {
+    card: {
+      light: '1px solid #E8E8E8',
+    },
+  },
   size: {
     font: {
       h1: '5.8rem',
@@ -8,6 +17,7 @@ export const LAWTheme = {
       h4: '2rem',
       button: '1.4rem',
       mobile_menu: '3rem',
+      card_header: '1.6rem',
       p: '1.4rem',
       list: '2rem',
       link: '1.4rem',
@@ -37,6 +47,11 @@ export const LAWTheme = {
       danger: '#E74040',
     },
   },
+  margin: {
+    cardHeader: {
+      desktop: '0 0 1.6rem 0',
+    },
+  },
   padding: {
     sectionHeader: {
       desktop: '0 0 4.8rem 0',
@@ -46,6 +61,9 @@ export const LAWTheme = {
     },
     nav: {
       desktop: '4rem 0',
+    },
+    offerBox: {
+      desktop: '3.5rem 4rem',
     },
   },
 }

@@ -10,10 +10,7 @@ import { Section, SectionVariants } from '../atoms/Section'
 import { Navigation, NavigationSections } from '../components/Navigation';
 import { MainSection } from "../components/MainSection";
 import { OfferList } from '../components/OfferList'
-import {OfferBox} from "../atoms/OfferBox";
 
-// Icons
-import HammerIcon from '../images/icons/hammer-lg.svg';
 
 declare module '@emotion/react' {
   export interface Theme extends ILAWTheme {}
@@ -23,7 +20,7 @@ declare module '@emotion/react' {
 
 // markup
 const IndexPage = () => {
-  console.log(HammerIcon)
+
   return (
     <ThemeProvider theme={LAWTheme}>
       <Fragment>
