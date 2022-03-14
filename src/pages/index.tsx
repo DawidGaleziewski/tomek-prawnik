@@ -12,7 +12,8 @@ import { MainSection } from "../layout/MainSection";
 import { OfferSection } from '../layout/OfferSection';
 import { AboutMeSection } from "../layout/AboutMeSection";
 import { PricingSection } from "../layout/PricingSection";
-import { Button, ButtonVariants } from '../atoms/Button'
+import { Button, ButtonVariants } from '../atoms/Button';
+import {InputSlider} from '../atoms/Input';
 
 
 declare module '@emotion/react' {
@@ -40,10 +41,7 @@ const IndexPage = () => {
                 Skontaktuj się
               </Typography>
               <form>
-                <div>
-                  <label>Imię</label>
-                  <input />
-                </div>
+                <InputSlider id="name" labelText="Imię" type="text" name="name"  />
                 <Button variant={ButtonVariants.SEND_FORM}>
                   Wyślij
                 </Button>

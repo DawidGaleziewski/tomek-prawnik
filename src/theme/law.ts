@@ -1,4 +1,7 @@
 export const LAWTheme = {
+  transition: {
+    hover: 'background-color 0.3s ease-in',
+  },
   weight: {
     normal: 400,
     bold: 700,
@@ -67,6 +70,9 @@ export const LAWTheme = {
     },
     button: {
       desktop: '1.5rem 4rem',
+    },
+    input: {
+      desktop: '1.5rem 2.1rem',
     },
   },
   radius: {

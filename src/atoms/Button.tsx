@@ -22,9 +22,11 @@ export const Button = styled.button<IButton>`
         background-color: ${props.theme.colors.primary};
         border-color: ${props.theme.colors.primary};
         color: ${props.theme.colors.font.light};
+        transition: ${props.theme.transition.hover};
 
         &:hover {
             background-color: ${props.theme.colors.background.light};
+            color: ${props.theme.colors.primary};
         }
     `}
 `;
