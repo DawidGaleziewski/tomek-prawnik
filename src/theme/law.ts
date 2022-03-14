@@ -65,6 +65,12 @@ export const LAWTheme = {
     offerBox: {
       desktop: '3.5rem 4rem',
     },
+    button: {
+      desktop: '1.5rem 4rem',
+    },
+  },
+  radius: {
+    button: '5px',
   },
 }
 

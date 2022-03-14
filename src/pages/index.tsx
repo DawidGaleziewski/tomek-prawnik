@@ -12,6 +12,7 @@ import { MainSection } from "../layout/MainSection";
 import { OfferSection } from '../layout/OfferSection';
 import { AboutMeSection } from "../layout/AboutMeSection";
 import { PricingSection } from "../layout/PricingSection";
+import { Button, ButtonVariants } from '../atoms/Button'
 
 
 declare module '@emotion/react' {
@@ -43,6 +44,9 @@ const IndexPage = () => {
                   <label>Imię</label>
                   <input />
                 </div>
+                <Button variant={ButtonVariants.SEND_FORM}>
+                  Wyślij
+                </Button>
               </form>
             </UXContainer>
           </Section>
