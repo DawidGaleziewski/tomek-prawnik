@@ -7,7 +7,10 @@ export const LAWTheme = {
     normal: 400,
     bold: 700,
   },
-  fontFamily: {},
+  fontFamily: {
+    header: "'Martel', serif",
+    body: "'Open Sans', sans-serif",
+  },
   border: {
     card: {
       light: '1px solid #E8E8E8',
