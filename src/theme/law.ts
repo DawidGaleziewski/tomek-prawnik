@@ -1,6 +1,7 @@
 export const LAWTheme = {
   transition: {
     hover: 'background-color 0.3s ease-in',
+    input_focus: 'all ease-in 0.3s',
   },
   weight: {
     normal: 400,
@@ -10,6 +11,10 @@ export const LAWTheme = {
   border: {
     card: {
       light: '1px solid #E8E8E8',
+    },
+    input: {
+      default: '1px solid #92a2ae',
+      active: '1px solid #5a95e6',
     },
   },
   size: {
@@ -24,6 +29,7 @@ export const LAWTheme = {
       p: '1.4rem',
       list: '2rem',
       link: '1.4rem',
+      input: '1.4rem',
     },
   },
   colors: {
@@ -37,6 +43,7 @@ export const LAWTheme = {
       dark: '#252B42',
       grey: '#737373',
       light: '#ffffff',
+      input_label: '#BDBDBD',
     },
     background: {
       dark: '#252B42',
@@ -77,6 +84,7 @@ export const LAWTheme = {
   },
   radius: {
     button: '5px',
+    input: '5px',
   },
 }
 

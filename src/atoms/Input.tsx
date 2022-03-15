@@ -72,33 +72,35 @@ const InputBase = styled.div`
 
   & input {
     width: 100%;
-    padding: 0.8rem;
+    padding: ${props => props.theme.padding.input.desktop};
+    border-radius: ${props => props.theme.radius.input};
     border: none;
-    border-bottom: 1px solid #92a2ae;
+    border-bottom: ${props => props.theme.border.input.default};
     outline: none;
     display: block;
+    
     &:focus {
-        border-bottom: 1px solid #5a95e6;
+        border-bottom: ${props => props.theme.colors.primary};
     }
   }
 
   & label {
     position: absolute;
-    left: 0.8rem;
+    left: 2.1rem;
     top: 50%;
-    font-size: 1.6rem;
-    color: #92a2ae;
+    font-size: ${props => props.theme.size.font.input};
+    color: ${props => props.theme.colors.font.input_label};
     transform: translate(-10%, -170%) scale(0.8);
 
-    input:placeholder-shown + & {
-        background-color: red;
-      transform: translate(0, -50%);
-    }
-
-    input:-webkit-autofill + & {
-      transform: translate(-10%, -170%) scale(0.8);
-    }
-    transition: all ease-in 0.3s;
+    transition: ${props => props.theme.transition.input_focus};
     pointer-events: none;
+  }
+
+  input:placeholder-shown + label {
+      transform: translate(0, -50%);
+  }
+
+  input:-webkit-autofill + label {
+      transform: translate(-10%, -170%) scale(0.8);
   }
 `;

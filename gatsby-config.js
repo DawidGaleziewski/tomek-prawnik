@@ -48,5 +48,12 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Martel\:300,400,700`, `Open Sans\:300,400,700`],
+        display: 'swap',
+      },
+    },
   ],
 }
