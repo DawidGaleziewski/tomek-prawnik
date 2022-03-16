@@ -62,7 +62,7 @@ export const AboutMeSection = () => (
 const swapWrapper = css`
         display: flex;
         align-items: center;
-        jusify-content: space-between;
+        justify-content: space-between;
       `
 
 const textColumn = css`
