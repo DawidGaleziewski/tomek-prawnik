@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ChangeEvent } from "react";
 import { css } from "@emotion/react";
 import styled from '@emotion/styled';
 
@@ -8,7 +8,7 @@ interface IInputSliderProps {
     name: string,
     labelText: string,
     value: string,
-    onChange: () => void;
+    onChange: (event: ChangeEvent) => void;
 }
 
 export const InputSlider = ({ id, type, name, labelText, value, onChange }: IInputSliderProps) => {

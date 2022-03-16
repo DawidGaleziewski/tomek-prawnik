@@ -29,4 +29,19 @@ export const Button = styled.button<IButton>`
             color: ${props.theme.colors.primary};
         }
     `}
+
+    ${props => props.disabled && css`
+        transition: none;
+        background-color: ${props.theme.colors.state.disabled};
+        border-color: ${props.theme.colors.state.disabled};
+        color: ${props.theme.colors.font.light};
+        cursor: not-allowed;
+
+        &:hover {
+            background-color: ${props.theme.colors.state.disabled};
+            border-color: ${props.theme.colors.state.disabled};
+            color: ${props.theme.colors.font.light};
+            cursor: not-allowed;
+        }
+    `}
 `;

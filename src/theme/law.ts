@@ -54,7 +54,7 @@ export const LAWTheme = {
     },
     state: {
       hover: '#2A7CC7',
-      disabled: '#8EC2F2',
+      disabled: '#737373',
       success: '#2DC071',
       alert: '#E77C40',
       danger: '#E74040',

@@ -4,9 +4,9 @@ import { NavLink } from '../atoms/NavLink'
 import styled from '@emotion/styled'
 
 export enum NavigationSections {
-  ABOUT_ME = '#about-me',
-  PRICING = '#pricing',
-  CONTACT = '#contact',
+  ABOUT_ME = 'about-me',
+  PRICING = 'pricing',
+  CONTACT = 'contact',
 }
 
 export const Navigation: FunctionComponent = (props) => {
