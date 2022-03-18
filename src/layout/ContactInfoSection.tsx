@@ -13,7 +13,7 @@ import PhoneIcon from '../images/icons/Phone.svg';
 
 
 export const ContactInfoSection = () => (
-  <Section id={NavigationSections.CONTACT} variant={SectionVariants.FLASHY}>
+  <Section id={NavigationSections.CONTACT} variant={SectionVariants.FLASHY} as="address">
     <UXContainer>
       <Typography as="h2" variant={TypographyVariants.SECTION_HEADER}>
         Moje dane kontaktowe
