@@ -10,6 +10,7 @@ import { OfferSection } from '../layout/OfferSection';
 import { AboutMeSection } from "../layout/AboutMeSection";
 import { PricingSection } from "../layout/PricingSection";
 import { ContactSection } from "../layout/ContactSection";
+import { ContactInfoSection } from "../layout/ContactInfoSection";
 
 
 
@@ -29,6 +30,7 @@ const IndexPage = () => {
           <MainSection />
           <OfferSection />
           <AboutMeSection />
+          <ContactInfoSection />
           <PricingSection />
           <ContactSection />
         </main>

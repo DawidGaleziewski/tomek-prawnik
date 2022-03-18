@@ -50,4 +50,5 @@ const TypographyBase = styled.p<ITypographyBase>`
     ${props => props.variant === TypographyVariants.BODY && css`
         line-height: 2rem;
     `}
+
 `;

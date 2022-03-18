@@ -3,7 +3,8 @@ import {css} from '@emotion/react';
 import styled from '@emotion/styled';
 
 export enum SectionVariants {
-    DARK = "dark"
+    DARK = "dark",
+    FLASHY = "flashy"
 }
 
 interface ISection {
@@ -18,10 +19,16 @@ interface ISection {
 
 export const Section = styled.section<ISection>`
     padding: ${props => props.theme.padding.section.desktop};
+
     ${props => props.variant === SectionVariants.DARK && css`
         background-color: ${props.theme.colors.background.dark};
-        color: ${props.theme.colors.font.light}
+        color: ${props.theme.colors.font.light};
     `};
+
+    ${props => props.variant === SectionVariants.FLASHY && css`
+        background: ${props.theme.colors.background.flashy};
+        color: ${props.theme.colors.font.light};
+    `}
 
     ${props => props.backgroundImg?.desktop && css`
         background-image: url(${props.backgroundImg.desktop});

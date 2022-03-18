@@ -51,6 +51,7 @@ export const LAWTheme = {
     background: {
       dark: '#252B42',
       light: '#FFFFFF',
+      flashy: 'linear-gradient(270deg, #295C7A -1.04%, #0072B5 100%);',
     },
     state: {
       hover: '#2A7CC7',

@@ -12,9 +12,6 @@ export const PricingSection = () => (
       <Typography as="h2" variant={TypographyVariants.SECTION_HEADER}>
         Wynagrodzenie
       </Typography>
-
-      <div css={swapWrapper}>
-        <div css={textColumn}>
           <Typography>
             Wynagrodzenie zawsze jest ustalane indywidualnie z klientem, w
             zależności od charakteru prowadzonej sprawy, stopnia jej
@@ -37,28 +34,12 @@ export const PricingSection = () => (
           <Typography>
             -wynagrodzenie, tzw. success fee, tj. prowizyjne.
           </Typography>
-        </div>
-        <div css={imageColumn}>
-          <Image src="map.png" />
-        </div>
-
-      </div>
     </UXContainer>
   </Section>
 )
 
 
-
-const swapWrapper = css`
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      `
-
 const textColumn = css`
           max-width: 50%;
         `
 
-const imageColumn = (props) => css`
-            width: calc(50% - 3rem);
-          `
