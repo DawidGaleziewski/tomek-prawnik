@@ -1,5 +1,5 @@
 import React from 'react'
-import { OfferBox } from '../atoms/OfferBox'
+import { OfferBox, OfferBoxVariant } from '../atoms/OfferBox'
 import styled from '@emotion/styled';
 
 // Icons
@@ -9,6 +9,8 @@ import CertIcon from '../images/icons/cert-lg.svg';
 import CheckIcon from '../images/icons/check-lg.svg';
 import ScalesIcon from '../images/icons/scales-lg.svg';
 
+import HammerLight from "../images/icons/hammer_light.svg";
+import CertificateLight from "../images/icons/cartificate_light.svg"
 
 export const OfferList = () => (
   <OfferListBase>
@@ -16,21 +18,22 @@ export const OfferList = () => (
         Błędy medyczne, wypadki komunikacyjne, katastrofy budowlane, wypadki
         przy pracy i inne
     </OfferBox>
-    <OfferBox headerText="Obsługa przedsiębiorców" headerImg={CheckIcon}>
+    <OfferBox variant={OfferBoxVariant.SPECIAL} headerText="Obsługa przedsiębiorców" headerImg={CertificateLight}>
       Prawo korporacyjne i prawo spółek handlowych
     </OfferBox>
     <OfferBox headerText="Prawo karne" headerImg={CertIcon}>
         Obrońca i pełnomocnik w toku postępowania karnego, karnoskarbowego i
         wykroczeniowego Prawo karne gospodarcze
     </OfferBox>
-    <OfferBox headerText="Prawo cywilne" headerImg={CheckIcon}>
+
+    <OfferBox variant={OfferBoxVariant.SPECIAL} headerText="Prawo cywilne" headerImg={HammerLight}>
         Zobowiązania, umowy, dochodzenie wierzytelności, prawo spadkowe
     </OfferBox>
     <OfferBox headerText="Bieżąca obsługa prawna" headerImg={ScalesIcon}>
         Reprezentacja w toku procesu reprezentacja w toku egzekucji,
         sporządzanie opinii prawnych, analiza umów, porady prawne i negocjacje
     </OfferBox>
-    <OfferBox headerText="Prawo rodzinne" headerImg={Hammer2Icon}>
+    <OfferBox variant={OfferBoxVariant.SPECIAL} headerText="Prawo rodzinne" headerImg={CertificateLight}>
         Rozwód i separacja, władza rodzicielska, ustalenie kontaktów, podział
         majątku, alimenty, postępowania w sprawach nieletnich
     </OfferBox>

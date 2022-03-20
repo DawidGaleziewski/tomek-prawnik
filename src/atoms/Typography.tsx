@@ -6,6 +6,7 @@ export enum TypographyVariants {
     MAIN_HEADER = "main-header",
     SECTION_HEADER = "section-header",
     CARD_HEADER = "card-header",
+    CARD_HEADER_SPECIAL = "card-header-special",
     BODY = "body"
 }
 
@@ -45,6 +46,14 @@ const TypographyBase = styled.p<ITypographyBase>`
         font-size: ${props.theme.size.font.card_header};
         font-weight: ${props.theme.weight.bold};
         color: ${props.theme.colors.font.dark};
+        font-family: ${props.theme.fontFamily.header}
+    `}
+
+    ${props => props.variant === TypographyVariants.CARD_HEADER_SPECIAL && css`
+        font-size: ${props.theme.size.font.card_header_special};
+        font-weight: ${props.theme.weight.bold};
+        color: ${props.theme.colors.font.light};
+        font-family: ${props.theme.fontFamily.header}
     `}
 
     ${props => props.variant === TypographyVariants.BODY && css`

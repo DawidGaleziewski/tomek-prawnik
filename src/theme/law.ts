@@ -29,6 +29,7 @@ export const LAWTheme = {
       button: '1.4rem',
       mobile_menu: '3rem',
       card_header: '1.6rem',
+      card_header_special: '2.4rem',
       p: '1.4rem',
       list: '2rem',
       link: '1.4rem',
@@ -51,6 +52,7 @@ export const LAWTheme = {
     background: {
       dark: '#252B42',
       light: '#FFFFFF',
+      special: '#295C7A',
       flashy: 'linear-gradient(270deg, #295C7A -1.04%, #0072B5 100%);',
     },
     state: {
