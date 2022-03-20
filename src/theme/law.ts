@@ -22,7 +22,7 @@ export const LAWTheme = {
   },
   size: {
     font: {
-      h1: '5.8rem',
+      h1: '7.2rem',
       h2: '4rem',
       h3: '2.4rem',
       h4: '2rem',
