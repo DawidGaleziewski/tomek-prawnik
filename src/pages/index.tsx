@@ -31,8 +31,8 @@ const IndexPage = () => {
           <OfferSection />
           <AboutMeSection />
           <ContactInfoSection />
-          <PricingSection />
           <ContactSection />
+          <PricingSection />
         </main>
 
       </Fragment>
