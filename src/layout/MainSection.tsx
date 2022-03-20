@@ -4,8 +4,8 @@ import { Typography, TypographyVariants } from '../atoms/Typography';
 import styled from '@emotion/styled';
 // import mainSectionBackground from './images/main-image.jpg';
 // import mainSectionBackground from './images/main_image_variant_1.jpg';
-import mainSectionBackground from './images/main_image_variant_2.jpg';
-// import mainSectionBackground from './images/main_image_variant_3.jpg';
+// import mainSectionBackground from './images/main_image_variant_2.jpg';
+import mainSectionBackground from './images/main_image_variant_3.jpg';
 
 import { UXContainer } from '../atoms/UXContainer';
 
@@ -30,4 +30,5 @@ const MainSectionBase = styled.section`
     background-image: url(${mainSectionBackground});
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 `;
