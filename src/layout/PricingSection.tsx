@@ -30,7 +30,6 @@ export const PricingSection = () => (
             określonej indywidualnie w umowie,
           </Typography>
           <Typography>- wynagrodzenie godzinowe,</Typography>
-          <Typography>- wynagrodzenie godzinowe,</Typography>
           <Typography>
             -wynagrodzenie, tzw. success fee, tj. prowizyjne.
           </Typography>
