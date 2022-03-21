@@ -26,9 +26,13 @@ export const MainSection = () => (
 
 const MainSectionBase = styled.section`
     position: relative;
-    padding: 30rem 0;
+    padding: 15rem 4.2rem;
     background-image: url(${mainSectionBackground});
     background-size: cover;
     background-repeat: no-repeat;
-    /* background-position: 50% 50%; */
+    /* background-position: 50% 50%; */;
+
+    @media (min-width: ${props => props.theme.breakpoint.medium + 'px'}){
+          padding: 30rem 0;
+    }
 `;

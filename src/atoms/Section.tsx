@@ -18,7 +18,7 @@ interface ISection {
 }
 
 export const Section = styled.section<ISection>`
-    padding: ${props => props.theme.padding.section.desktop};
+    padding: ${props => props.theme.padding.section.mobile};
 
     ${props => props.variant === SectionVariants.DARK && css`
         background-color: ${props.theme.colors.background.dark};
@@ -36,4 +36,8 @@ export const Section = styled.section<ISection>`
         background-position: center;
         background-repeat: no-repeat;
     `}
+
+    @media (min-width: ${props => props.theme.breakpoint.medium + 'px'}){
+        padding: ${props => props.theme.padding.section.desktop};
+    }
 `;

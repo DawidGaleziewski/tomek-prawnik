@@ -38,7 +38,3 @@ export const PricingSection = () => (
 )
 
 
-const textColumn = css`
-          max-width: 50%;
-        `
-

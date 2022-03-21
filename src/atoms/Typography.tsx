@@ -29,10 +29,15 @@ const TypographyBase = styled.p<ITypographyBase>`
     ${props => props.variant === TypographyVariants.MAIN_HEADER && css`
         text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
         color: ${props.theme.colors.font.light};
-        font-size: ${props.theme.size.font.h1};
-        text-align: left;
         padding: ${props.theme.padding.sectionHeader.desktop};
-        font-family: ${props.theme.fontFamily.header}
+        font-family: ${props.theme.fontFamily.header};
+        font-size: ${props.theme.size.font.h2};
+        text-align: center;
+
+        @media (min-width: ${props.theme.breakpoint.medium + 'px'}){
+            font-size: ${props.theme.size.font.h1};
+            text-align: left;
+        }
     `}
 
     ${props => props.variant === TypographyVariants.SECTION_HEADER && css`
@@ -50,10 +55,14 @@ const TypographyBase = styled.p<ITypographyBase>`
     `}
 
     ${props => props.variant === TypographyVariants.CARD_HEADER_SPECIAL && css`
-        font-size: ${props.theme.size.font.card_header_special};
         font-weight: ${props.theme.weight.bold};
         color: ${props.theme.colors.font.light};
-        font-family: ${props.theme.fontFamily.header}
+        font-family: ${props.theme.fontFamily.header};
+        font-size: ${props.theme.size.font.card_header};
+
+        @media (min-width: ${props.theme.breakpoint.medium + 'px'}){
+            font-size: ${props.theme.size.font.card_header_special};
+        }
     `}
 
     ${props => props.variant === TypographyVariants.BODY && css`

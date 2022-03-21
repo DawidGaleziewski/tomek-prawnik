@@ -1,4 +1,10 @@
 export const LAWTheme = {
+  breakpoint: {
+    small: 576,
+    medium: 768,
+    large: 992,
+    extra_large: 1200,
+  },
   transition: {
     hover: 'background-color 0.3s ease-in',
     input_focus: 'all ease-in 0.3s',
@@ -72,8 +78,12 @@ export const LAWTheme = {
     sectionHeader: {
       desktop: '0 0 4.8rem 0',
     },
+    ux_container: {
+      mobile: '0 4.2rem',
+    },
     section: {
       desktop: '14rem 0 10rem 0',
+      mobile: '7.5rem 0 10rem 0',
     },
     nav: {
       desktop: '4rem 0',

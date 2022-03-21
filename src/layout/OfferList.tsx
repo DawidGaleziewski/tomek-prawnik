@@ -43,8 +43,20 @@ export const OfferList = () => (
 const OfferListBase = styled.ul`
   padding: 0;
   margin: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 33% [col-start]);
-  column-gap: 3rem;
-  row-gap: 3rem;
+
+  display: block;
+  & > li {
+     margin-bottom: 3rem;
+  }
+
+  @media (min-width: ${props => props.theme.breakpoint.medium + 'px'}){
+    display: grid;
+    grid-template-columns: repeat(3, 33% [col-start]);
+    column-gap: 3rem;
+    row-gap: 3rem;
+
+    & > li {
+      margin-bottom: 0;
+    }
+  }
 `;
