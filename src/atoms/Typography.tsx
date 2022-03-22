@@ -66,7 +66,12 @@ const TypographyBase = styled.p<ITypographyBase>`
     `}
 
     ${props => props.variant === TypographyVariants.BODY && css`
-        line-height: 2rem;
+        line-height: 2.2rem;
+        letter-spacing: 0.2px;
+        
+        &:not(:last-of-type){
+            margin-bottom: 3rem;
+        }
     `}
 
 `;
