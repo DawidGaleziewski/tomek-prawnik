@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import { Helmet } from "react-helmet"
 import { ThemeProvider } from '@emotion/react'
 import 'normalize.css'
 import '../theme/global.css'
@@ -23,6 +24,13 @@ const IndexPage = () => {
 
   return (
     <ThemeProvider theme={LAWTheme}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <meta name="robots" content="index, follow" />
+        <title>Tomasz Mikusek - radca prawny</title>
+        <link rel="canonical" href="http://tomasz-mikusek.com/example" />
+        <meta name="description" content="Tomasz Mikusek - radca prawny. Prawo cywilne. Doradztwo prawne. Kancelaria prawna" />
+      </Helmet>
       <Fragment>
         <Navigation />
 
