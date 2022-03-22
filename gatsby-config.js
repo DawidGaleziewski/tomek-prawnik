@@ -1,7 +1,7 @@
 /** @type {import('gatsby').GatsbyConfig} */
 module.exports = {
   siteMetadata: {
-    title: `new`,
+    title: `Tomasz Mikusek - radca prawny`,
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
