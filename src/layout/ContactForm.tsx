@@ -9,16 +9,23 @@ import { Textarea } from '../atoms/Textarea'
 const formWrapper = css`
   max-width: 60rem;
   margin: 0 auto;
+  padding:0;
 `
 
-const twoColumnInput = css`
-  display: flex;
-  justify-content: space-between;
+const twoColumnInput = (props) => css`
+    & .input-slider-wrapper {
+      margin-bottom: 2rem;
+    }
 
-  & .input-slider-wrapper {
-    width: calc(50% - 3rem);
-    margin-bottom: 2rem;
-  }
+   @media (min-width: ${props.breakpoint.medium + 'px'}){
+    display: flex;
+    justify-content: space-between;
+
+    & .input-slider-wrapper {
+      width: calc(50% - 3rem);
+      margin-bottom: 2rem;
+    }
+   }
 `
 
 enum ActionTypes {
@@ -91,8 +98,6 @@ const initialState = {
 export const ContactForm = () => {
   const [formState, dispatchFormState] = useReducer(formReducer, initialState);
   const isFormPending = formState.status === NetworkStatus.LOADING;
-
-  console.log('form state', formState, formState.status === NetworkStatus.LOADING);
 
   const onInputChange = (event:ChangeEvent) => dispatchFormState({type: ActionTypes.UPDATE, payload:{ value: event.target.value, name: event.target.name}});
 

@@ -59,10 +59,13 @@ export const AboutMeSection = () => (
   </Section>
 );
 
-const swapWrapper = css`
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+const swapWrapper = (props) => css`
+      
+        @media (min-width: ${props.breakpoint.medium + 'px'}){
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
       `
 
 const textColumn = css`
@@ -70,6 +73,11 @@ const textColumn = css`
         `
 
 const imageColumn = (props) => css`
-            width: 313px;
-            border: ${props.border.card.light};
+        margin-bottom: 2rem;
+
+        @media (min-width: ${props.breakpoint.medium + 'px'}){
+          margin-bottom: 0;
+          width: 313px;
+          border: ${props.border.card.light};
+        }
           `

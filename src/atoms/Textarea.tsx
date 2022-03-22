@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 
 
 export const Textarea = styled.textarea`
+    max-width: 60rem;
     width: 100%;
     padding: ${props => props.theme.padding.input.desktop};
     border-radius: ${props => props.theme.radius.input};
