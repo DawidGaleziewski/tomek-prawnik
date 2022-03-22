@@ -23,7 +23,7 @@ export const ContactInfoSection = () => (
           <Typography css={textIconHolder}><MailIcon /> <span>Telefon: +48 501 138 557</span></Typography>
       </span>
       <span css={textIconHolder}>
-          <Typography><MapIcon/> Adres: 4517 Washington Ave</Typography>
+          <Typography><MapIcon/> Adres: Pańska 21, 05-800</Typography>
       </span>
       <span css={textIconHolder}>
         <Typography><PhoneIcon/> Email: tomekm1988@gmail.com</Typography>

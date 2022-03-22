@@ -78,6 +78,7 @@ const InputBase = styled.div`
     border-bottom: ${props => props.theme.border.input.default};
     outline: none;
     display: block;
+    font-size: ${props => props.theme.size.font.input};
     
     &:focus {
         border-bottom: ${props => props.theme.colors.primary};
