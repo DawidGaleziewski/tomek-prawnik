@@ -22,7 +22,7 @@ const twoColumnInput = (props) => css`
     justify-content: space-between;
 
     & .input-slider-wrapper {
-      width: calc(50% - 3rem);
+      width: calc(50% - 1.4rem);
       margin-bottom: 2rem;
     }
    }
