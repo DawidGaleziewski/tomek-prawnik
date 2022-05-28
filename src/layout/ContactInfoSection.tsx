@@ -10,6 +10,7 @@ import { NavigationSections } from '../layout/Navigation'
 import MailIcon from '../images/icons/mail.svg'
 import MapIcon from '../images/icons/MapPin.svg'
 import PhoneIcon from '../images/icons/Phone.svg'
+import { ContactMap } from '../components/ContactMap'
 
 export const ContactInfoSection = () => (
   <Section
@@ -40,6 +41,7 @@ export const ContactInfoSection = () => (
           </a>
         </Typography>
       </span>
+      <ContactMap />
     </UXContainer>
   </Section>
 )
