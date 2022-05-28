@@ -31,6 +31,7 @@ const MainSectionBase = styled.section`
   background-image: url(${mainSectionBackgroundMobile});
   background-size: cover;
   background-repeat: no-repeat;
+  margin-top: 9.6rem;
   /* background-position: 50% 50%; */
 
   @media (min-width: ${(props) => props.theme.breakpoint.medium + 'px'}) {

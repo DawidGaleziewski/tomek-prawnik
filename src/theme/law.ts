@@ -86,7 +86,7 @@ export const LAWTheme = {
       mobile: '7.5rem 0 10rem 0',
     },
     nav: {
-      desktop: '4rem 0',
+      desktop: '2.8rem 0',
     },
     offerBox: {
       desktop: '3.5rem 4rem',
