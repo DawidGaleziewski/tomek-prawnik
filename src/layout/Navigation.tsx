@@ -14,7 +14,7 @@ export const Navigation: FunctionComponent = (props) => {
     <UXContainer>
       <NavigationBase>
         <ul>
-          <NavLink url={NavigationSections.ABOUT_ME}>O mnie!</NavLink>
+          <NavLink url={NavigationSections.ABOUT_ME}>O mnie</NavLink>
           <NavLink url={NavigationSections.PRICING}>cennik</NavLink>
           <NavLink url={NavigationSections.CONTACT}>kontakt</NavLink>
         </ul>
@@ -24,17 +24,17 @@ export const Navigation: FunctionComponent = (props) => {
 }
 
 const NavigationBase: FunctionComponent = styled.nav`
-  padding: ${props => props.theme.padding.nav.desktop};
-  color: ${props => props.theme.colors.font.light};
+  padding: ${(props) => props.theme.padding.nav.desktop};
+  color: ${(props) => props.theme.colors.font.light};
   position: absolute;
   z-index: 100;
-  
+
   & ul {
     display: flex;
     align-items: baseline;
     justify-content: flex-start;
     padding: 0;
-    margin:0;
+    margin: 0;
   }
   & li {
     list-style: none;
