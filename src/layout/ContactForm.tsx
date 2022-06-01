@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useReducer } from 'react'
 import { css } from '@emotion/react'
-import axios from 'axios';
+import axios from 'axios'
 
 import { Button, ButtonVariants } from '../atoms/Button'
 import { InputSlider } from '../atoms/Input'
@@ -9,15 +9,15 @@ import { Textarea } from '../atoms/Textarea'
 const formWrapper = css`
   max-width: 60rem;
   margin: 0 auto;
-  padding:0;
+  padding: 0;
 `
 
 const twoColumnInput = (props) => css`
-    & .input-slider-wrapper {
-      margin-bottom: 2rem;
-    }
+  & .input-slider-wrapper {
+    margin-bottom: 2rem;
+  }
 
-   @media (min-width: ${props.breakpoint.medium + 'px'}){
+  @media (min-width: ${props.breakpoint.medium + 'px'}) {
     display: flex;
     justify-content: space-between;
 
@@ -25,97 +25,105 @@ const twoColumnInput = (props) => css`
       width: calc(50% - 1.4rem);
       margin-bottom: 2rem;
     }
-   }
+  }
 `
 
 enum ActionTypes {
   PENDING = 'pending',
   UPDATE = 'update',
   DONE = 'done',
-  FAILED = 'failed'
+  FAILED = 'failed',
 }
 
-type IFormAction = { type: ActionTypes.UPDATE; payload: {name: string, value: string} } | {type: ActionTypes.PENDING} |  {type: ActionTypes.DONE} | {type: ActionTypes.FAILED}
+type IFormAction =
+  | { type: ActionTypes.UPDATE; payload: { name: string; value: string } }
+  | { type: ActionTypes.PENDING }
+  | { type: ActionTypes.DONE }
+  | { type: ActionTypes.FAILED }
 
-enum NetworkStatus  {
-    SUCCESS,
-    ERROR,
-    DEFAULT,
-    LOADING
+enum NetworkStatus {
+  SUCCESS,
+  ERROR,
+  DEFAULT,
+  LOADING,
 }
 
 interface IFormState {
-    status: NetworkStatus,
-    values: {
-        [name: string]: string,
-    }
+  status: NetworkStatus
+  values: {
+    [name: string]: string
+  }
 }
 
 const formReducer = (state: IFormState, action: IFormAction) => {
   switch (action.type) {
     case ActionTypes.UPDATE: {
       return {
-          ...state,
-          values: {
-              ...state.values,
-              [action.payload.name]: action.payload.value
-          }
+        ...state,
+        values: {
+          ...state.values,
+          [action.payload.name]: action.payload.value,
+        },
       }
     }
 
     case ActionTypes.PENDING: {
-        return {
-            ...state,
-            status: NetworkStatus.LOADING
-        }
+      return {
+        ...state,
+        status: NetworkStatus.LOADING,
+      }
     }
 
     case ActionTypes.DONE: {
-        return {
-            ...state,
-            status: NetworkStatus.SUCCESS
-        }
+      return {
+        ...state,
+        status: NetworkStatus.SUCCESS,
+      }
     }
 
     case ActionTypes.FAILED: {
-        return {
-            ...state,
-            status: NetworkStatus.ERROR
-        }
+      return {
+        ...state,
+        status: NetworkStatus.ERROR,
+      }
     }
 
     default: {
       return state
     }
   }
-};
+}
 
 const initialState = {
-    values: {},
-    status: NetworkStatus.DEFAULT
-};
+  values: {},
+  status: NetworkStatus.DEFAULT,
+}
 
 export const ContactForm = () => {
-  const [formState, dispatchFormState] = useReducer(formReducer, initialState);
-  const isFormPending = formState.status === NetworkStatus.LOADING;
+  const [formState, dispatchFormState] = useReducer(formReducer, initialState)
+  const isFormPending = formState.status === NetworkStatus.LOADING
 
-  const onInputChange = (event:ChangeEvent) => dispatchFormState({type: ActionTypes.UPDATE, payload:{ value: event.target.value, name: event.target.name}});
+  const onInputChange = (event: ChangeEvent) =>
+    dispatchFormState({
+      type: ActionTypes.UPDATE,
+      payload: { value: event.target.value, name: event.target.name },
+    })
 
-  const onFormSubmit = async (event:ChangeEvent) => {
-      event.preventDefault();
+  const onFormSubmit = async (event: ChangeEvent) => {
+    event.preventDefault()
 
-      try {
-        dispatchFormState({type: ActionTypes.PENDING});
-        const response = await axios.post('https://formspree.io/f/xvolqqjq', {data:{...formState.values}});
-        dispatchFormState({type: ActionTypes.DONE});
+    try {
+      dispatchFormState({ type: ActionTypes.PENDING })
+      const response = await axios.post('https://formspree.io/f/xoqrrydq', {
+        data: { ...formState.values },
+      })
+      dispatchFormState({ type: ActionTypes.DONE })
+    } catch {
+      console.log('error sensing email')
+      dispatchFormState({ type: ActionTypes.FAILED })
+    }
 
-      } catch {
-          console.log('error sensing email');
-          dispatchFormState({type: ActionTypes.FAILED});
-      }
-      
-
-      console.log('sending data', formState.values)
+    console.log('sending data', formState.values)
   }
 
   return (
@@ -145,7 +153,9 @@ export const ContactForm = () => {
         rows={7}
       ></Textarea>
 
-      <Button disabled={isFormPending} variant={ButtonVariants.SEND_FORM}>{isFormPending ? 'Czekaj' : 'Wyślij'}</Button>
+      <Button disabled={isFormPending} variant={ButtonVariants.SEND_FORM}>
+        {isFormPending ? 'Czekaj' : 'Wyślij'}
+      </Button>
     </form>
   )
 }
