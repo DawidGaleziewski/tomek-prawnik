@@ -1,8 +1,8 @@
 /** @type {import('gatsby').GatsbyConfig} */
 module.exports = {
   siteMetadata: {
-    title: `Tomasz Mikusek - radca prawny`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `Tomasz Mikusek - radca prawny pruszków`,
+    siteUrl: `https://tomaszmikusek.pl/`,
   },
   plugins: [
     'gatsby-plugin-emotion',
