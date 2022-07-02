@@ -24,11 +24,11 @@ const IndexPage = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <meta name="robots" content="index, follow" />
-        <title>Tomasz Mikusek - radca prawny prószków</title>
+        <title>Tomasz Mikusek - radca prawny pruszków</title>
         <link rel="canonical" href="http://tomasz-mikusek.com/example" />
         <meta
           name="description"
-          content="Tomasz Mikusek - radca prawny prószków. Prawo cywilne. Doradztwo prawne. Kancelaria prawna"
+          content="Tomasz Mikusek - radca prawny pruszków. Prawo cywilne. Doradztwo prawne. Kancelaria prawna"
         />
       </Helmet>
       <Fragment>
